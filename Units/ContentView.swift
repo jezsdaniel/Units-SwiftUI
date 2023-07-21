@@ -14,13 +14,18 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             TemperatureView()
                 .tabItem {
-                    Image(systemName: "thermometer")
+                    Image(systemName: "thermometer").environment(\.symbolVariants, .none)
                     Text("Temperature")
                 }
             LengthView()
                 .tabItem {
-                    Image(systemName: "ruler")
+                    Image(systemName: "ruler").environment(\.symbolVariants, .none)
                     Text("Lenght")
+                }
+            TimeView()
+                .tabItem {
+                    Image(systemName: "clock").environment(\.symbolVariants, .none)
+                    Text("Time")
                 }
         }
     }

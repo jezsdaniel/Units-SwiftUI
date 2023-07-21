@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2E8D66D2A69B99500D2C8B0 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D66C2A69B99500D2C8B0 /* TemperatureView.swift */; };
+		B2E8D66F2A6A028500D2C8B0 /* LengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D66E2A6A028500D2C8B0 /* LengthView.swift */; };
 		B2E931ED2A679C9400ACCE24 /* UnitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E931EC2A679C9400ACCE24 /* UnitsApp.swift */; };
 		B2E931EF2A679C9400ACCE24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E931EE2A679C9400ACCE24 /* ContentView.swift */; };
 		B2E931F12A679C9500ACCE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E931F02A679C9500ACCE24 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		B2E8D66C2A69B99500D2C8B0 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		B2E8D66E2A6A028500D2C8B0 /* LengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthView.swift; sourceTree = "<group>"; };
 		B2E931E92A679C9400ACCE24 /* Units.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Units.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E931EC2A679C9400ACCE24 /* UnitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsApp.swift; sourceTree = "<group>"; };
 		B2E931EE2A679C9400ACCE24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				B2E931F22A679C9500ACCE24 /* Units.entitlements */,
 				B2E931F32A679C9500ACCE24 /* Preview Content */,
 				B2E8D66C2A69B99500D2C8B0 /* TemperatureView.swift */,
+				B2E8D66E2A6A028500D2C8B0 /* LengthView.swift */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E8D66F2A6A028500D2C8B0 /* LengthView.swift in Sources */,
 				B2E931EF2A679C9400ACCE24 /* ContentView.swift in Sources */,
 				B2E931ED2A679C9400ACCE24 /* UnitsApp.swift in Sources */,
 				B2E8D66D2A69B99500D2C8B0 /* TemperatureView.swift in Sources */,

@@ -17,10 +17,10 @@ struct ContentView: View {
                     Image(systemName: "thermometer")
                     Text("Temperature")
                 }
-            Text("Hola1")
+            LengthView()
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Tab two")
+                    Image(systemName: "ruler")
+                    Text("Lenght")
                 }
         }
     }

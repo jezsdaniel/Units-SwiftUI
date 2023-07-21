@@ -27,6 +27,11 @@ struct ContentView: View {
                     Image(systemName: "clock").environment(\.symbolVariants, .none)
                     Text("Time")
                 }
+            VolumeView()
+                .tabItem {
+                    Image(systemName: "cube").environment(\.symbolVariants, .none)
+                    Text("Volume")
+                }
         }
     }
 }

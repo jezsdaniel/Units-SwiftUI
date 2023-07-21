@@ -92,6 +92,15 @@ struct LengthView: View {
                 }
             }
             .navigationTitle("Length")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        fromIsFocused = false
+                        toIsFocused = false
+                    }
+                }
+            }
         }
     }
 }

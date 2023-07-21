@@ -1,14 +1,14 @@
 //
-//  TemperatureView.swift
+//  VolumeView.swift
 //  Units
 //
-//  Created by J. Daniel F. Ruano on 7/20/23.
+//  Created by J. Daniel F. Ruano on 7/21/23.
 //
 
 import SwiftUI
 
-struct TemperatureView: View {
-    let units = [UnitTemperature.fahrenheit, UnitTemperature.celsius, UnitTemperature.kelvin]
+struct VolumeView: View {
+    let units: [UnitVolume] = [UnitVolume.cubicCentimeters, UnitVolume.cubicMeters, UnitVolume.cups, UnitVolume.fluidOunces, UnitVolume.gallons, UnitVolume.liters, UnitVolume.metricCups, UnitVolume.milliliters, UnitVolume.pints, UnitVolume.teaspoons, UnitVolume.tablespoons]
     
     
     @State private var fromUnit = 0
@@ -19,10 +19,10 @@ struct TemperatureView: View {
     @FocusState private var fromIsFocused: Bool
     @FocusState private var toIsFocused: Bool
     
-    func convertValue(value: Double, from: UnitTemperature, to: UnitTemperature) -> Double {
-        let currentTemperature = Measurement(value: value, unit: from)
-        let convertedTemperature = currentTemperature.converted(to: to)
-        return convertedTemperature.value
+    func convertValue(value: Double, from: UnitVolume, to: UnitVolume) -> Double {
+        let current = Measurement(value: value, unit: from)
+        let converted = current.converted(to: to)
+        return converted.value
     }
     
     func labelForOption(index: Int) -> String {
@@ -31,7 +31,6 @@ struct TemperatureView: View {
         formatter.unitStyle = .short
         return formatter.string(from: option)
     }
-    
     
     var body: some View {
         NavigationView {
@@ -56,9 +55,10 @@ struct TemperatureView: View {
                         .onChange(of: fromUnit) {newValue in
                             fromIsFocused = false
                             toIsFocused = false
-                            toValue = convertValue(value: fromValue, from: units[fromUnit], to: units[newValue])
+                            toValue = convertValue(value: fromValue, from: units[newValue], to: units[toUnit])
+                            
                         }
-                        .frame(maxWidth: 64)
+                        .frame(maxWidth: 88)
                     }
                 } header: {
                     Text("From")
@@ -85,13 +85,13 @@ struct TemperatureView: View {
                             toIsFocused = false
                             toValue = convertValue(value: fromValue, from: units[fromUnit], to: units[newValue])
                         }
-                        .frame(maxWidth: 64)
+                        .frame(maxWidth: 88)
                     }
                 } header: {
                     Text("To")
                 }
             }
-            .navigationTitle("Temperature")
+            .navigationTitle("Volume")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
@@ -105,8 +105,8 @@ struct TemperatureView: View {
     }
 }
 
-struct TemperatureView_Previews: PreviewProvider {
+struct VolumeView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureView()
+        VolumeView()
     }
 }

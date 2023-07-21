@@ -92,6 +92,15 @@ struct TimeView: View {
                 }
             }
             .navigationTitle("Time")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        fromIsFocused = false
+                        toIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
